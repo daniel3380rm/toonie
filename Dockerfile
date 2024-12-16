@@ -1,40 +1,20 @@
-# Build stage
-FROM node:20 AS builder
+# Use the official Node.js image
+FROM node:20
 
-# Set the working directory
+# Set the working directory in the container
 WORKDIR /app
 
-# Clear yarn cache
-RUN yarn cache clean
+# Copy package.json and package-lock.json
+COPY package*.json ./
 
-# Copy package files
-COPY package*.json yarn.lock ./
+# Install dependencies
+RUN npm install
 
-# Install all dependencies (including dev dependencies)
-RUN yarn install --frozen-lockfile --no-cache --network-timeout 100000
-
-# Copy source code
+# Copy the rest of the application code
 COPY . .
 
-# Build application
-RUN yarn build
-
-# Production stage
-FROM node:20-slim
-
-WORKDIR /app
-
-# Copy package files
-COPY package*.json yarn.lock ./
-
-# Install only production dependencies
-RUN yarn install --production --frozen-lockfile --no-cache --network-timeout 100000
-
-# Copy built application from builder stage
-COPY --from=builder /app/dist ./dist
-
-# Expose port
+# Expose the application port
 EXPOSE 3000
 
-# Start application
-CMD ["node", "dist/main"]
+# Command to run the application
+CMD ["npm", "run", "start:prod"]

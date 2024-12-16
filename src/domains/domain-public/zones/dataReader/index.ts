@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import { Glob } from 'glob';
+import { glob } from 'glob'; // تغییر در import
 import { CountryInterface } from './interfaces/country.interface';
 import { StateInterface } from './interfaces/state.interface';
 import { CityInterface } from './interfaces/city.interface';
@@ -10,16 +10,11 @@ import { FileHelper } from 'src/common/helper';
 export class DataReader {
   constructor(private configService: ConfigService) {}
 
-  private getPath(dir: string) {
+  private async getPath(dir: string) {
     const pattern = '/**/*';
-
-    return new Promise((resolve, reject) => {
-      const mg = new Glob(dir + pattern, { mark: true, sync: false }, function (
-        er,
-        matches,
-      ) {
-        resolve(matches);
-      });
+    return await glob(dir + pattern, {
+      mark: true,
+      nodir: true,
     });
   }
 
