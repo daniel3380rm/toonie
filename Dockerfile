@@ -7,21 +7,14 @@ RUN apk add --no-cache tzdata
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy package files
-COPY package*.json yarn.lock ./
+# Install global dependencies
+RUN yarn global add @nestjs/cli
 
-# Clean install with yarn
+COPY package*.json yarn.lock ./
 RUN yarn install --frozen-lockfile
 
-# Copy the rest of the application code
 COPY . .
-
-# # Build the application
-# RUN yarn build
-
-# Remove development dependencies
-RUN yarn install --production --frozen-lockfile
-
+RUN yarn build
 # Expose the application port
 EXPOSE 3500
 
