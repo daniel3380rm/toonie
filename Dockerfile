@@ -1,37 +1,20 @@
-FROM node:20-alpine AS base
+# Use the official Node.js image
+FROM node:20
 
-RUN apk add --no-cache tzdata
-
-# Set the timezone to Asia/Tehran
-RUN cp /usr/share/zoneinfo/Asia/Tehran /etc/localtime && echo "Asia/Tehran" > /etc/timezone
-
-FROM base AS deps
-WORKDIR /temp-deps
-COPY package*.json ./
-RUN yarn install
-
-FROM base AS builder
-WORKDIR /build
-COPY . ./
-COPY --from=deps /temp-deps/node_modules ./node_modules
-
-# Check if a build script exists and run the build if it does
-RUN if [ -f package.json ] && grep -q '"build":' package.json; then yarn build; fi
-RUN yarn install --production --frozen-lockfile
-
-
-FROM base AS runner
-# RUN addgroup -S appgroup && adduser -S appuser -G appgroup
+# Set the working directory in the container
 WORKDIR /app
 
-COPY --from=builder /build ./
+# Copy package.json and package-lock.json
+COPY package*.json ./
 
-# RUN chown -R appuser:appgroup /app
+# Install dependencies
+RUN npm install
 
-# USER appuser
+# Copy the rest of the application code
+COPY . .
 
-ENV NODE_ENV=production
+# Expose the application port
+EXPOSE 3500
 
-EXPOSE 3000
-
+# Command to run the application
 CMD ["npm", "start"]
