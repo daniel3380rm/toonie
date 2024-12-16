@@ -1,0 +1,13 @@
+{
+    "NOT_FOUND": "Sorry, the specified user could not be found.",
+    "USER_EXIST": "The username or email you've entered is already associated with another account. Please try a different one or log in.",
+    "INCORRECT_PASSWORD": "The password entered for {username} is incorrect. Please try again.",
+    "USERNAME_DUPLICATED": "The username you've chosen is already in use. Please select a different one.",
+    "IS_NOT_ACTIVE": "The selected user account is not active. Please contact support if you believe this is an error.",
+    "OLD_PASSWORD_NOT_EQUAL_NEW_PASSWORD": "Your new password must be different from your old password. Please choose a different password.",
+    "PHONE_NUMBER_OR_EMAIL_REQUIRED": "Please provide either a phone number or an email address.",
+    "EMAIL_VERIFIED_BEFORE": "This email has already been verified. If you're facing issues, please contact support.",
+    "EMAIL_NOT_SET_YET": "You haven't set an email for this account yet. Please add an email to proceed.",
+    "PHONE_NUMBER_DUPLICATE": "The phone number you've entered is already associated with another account.",
+    "EMAIL_DUPLICATED": "The email address you've entered is already associated with another account."
+}

@@ -1,0 +1,6 @@
+{
+    "INCORRECT_VERIFICATION_CODE": "The verification code you entered is incorrect. Please try again.",
+    "INVALID_TOKEN": "Your session has expired or the authentication token is invalid. Please log in again.",
+    "INVALID_CAPTCHA": "The captcha you entered is incorrect. Please try again.",
+    "NOT_FOUND_SESSION": "Your session has ended or could not be found. Please log in to continue."
+}

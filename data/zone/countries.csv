@@ -1,0 +1,251 @@
+id,name,iso3,iso2,phoneCode,currency,latitude,longitude,emoji
+1,Afghanistan,AFG,AF,+93,AFN,33,65,🇦🇫
+2,Aland Islands,ALA,AX,+358-18,EUR,60.116667,19.9,🇦🇽
+3,Albania,ALB,AL,+355,ALL,41,20,🇦🇱
+4,Algeria,DZA,DZ,+213,DZD,28,3,🇩🇿
+5,American Samoa,ASM,AS,+1-684,USD,-14.33333333,-170,🇦🇸
+6,Andorra,AND,AD,+376,EUR,42.5,1.5,🇦🇩
+7,Angola,AGO,AO,+244,AOA,-12.5,18.5,🇦🇴
+8,Anguilla,AIA,AI,+1-264,XCD,18.25,-63.16666666,🇦🇮
+9,Antarctica,ATA,AQ,+672,AAD,-74.65,4.48,🇦🇶
+10,Antigua And Barbuda,ATG,AG,+1-268,XCD,17.05,-61.8,🇦🇬
+11,Argentina,ARG,AR,+54,ARS,-34,-64,🇦🇷
+12,Armenia,ARM,AM,+374,AMD,40,45,🇦🇲
+13,Aruba,ABW,AW,+297,AWG,12.5,-69.96666666,🇦🇼
+14,Australia,AUS,AU,+61,AUD,-27,133,🇦🇺
+15,Austria,AUT,AT,+43,EUR,47.33333333,13.33333333,🇦🇹
+16,Azerbaijan,AZE,AZ,+994,AZN,40.5,47.5,🇦🇿
+18,Bahrain,BHR,BH,+973,BHD,26,50.55,🇧🇭
+19,Bangladesh,BGD,BD,+880,BDT,24,90,🇧🇩
+20,Barbados,BRB,BB,+1-246,BBD,13.16666666,-59.53333333,🇧🇧
+21,Belarus,BLR,BY,+375,BYN,53,28,🇧🇾
+22,Belgium,BEL,BE,+32,EUR,50.83333333,4,🇧🇪
+23,Belize,BLZ,BZ,+501,BZD,17.25,-88.75,🇧🇿
+24,Benin,BEN,BJ,+229,XOF,9.5,2.25,🇧🇯
+25,Bermuda,BMU,BM,+1-441,BMD,32.33333333,-64.75,🇧🇲
+26,Bhutan,BTN,BT,+975,BTN,27.5,90.5,🇧🇹
+27,Bolivia,BOL,BO,+591,BOB,-17,-65,🇧🇴
+155,"Bonaire, Sint Eustatius and Saba",BES,BQ,+599,USD,12.15,-68.266667,🇧🇶
+28,Bosnia and Herzegovina,BIH,BA,+387,BAM,44,18,🇧🇦
+29,Botswana,BWA,BW,+267,BWP,-22,24,🇧🇼
+30,Bouvet Island,BVT,BV,+55,NOK,-54.43333333,3.4,🇧🇻
+31,Brazil,BRA,BR,+55,BRL,-10,-55,🇧🇷
+32,British Indian Ocean Territory,IOT,IO,+246,USD,-6,71.5,🇮🇴
+33,Brunei,BRN,BN,+673,BND,4.5,114.66666666,🇧🇳
+34,Bulgaria,BGR,BG,+359,BGN,43,25,🇧🇬
+35,Burkina Faso,BFA,BF,+226,XOF,13,-2,🇧🇫
+36,Burundi,BDI,BI,+257,BIF,-3.5,30,🇧🇮
+37,Cambodia,KHM,KH,+855,KHR,13,105,🇰🇭
+38,Cameroon,CMR,CM,+237,XAF,6,12,🇨🇲
+39,Canada,CAN,CA,+1,CAD,60,-95,🇨🇦
+40,Cape Verde,CPV,CV,+238,CVE,16,-24,🇨🇻
+41,Cayman Islands,CYM,KY,+1-345,KYD,19.5,-80.5,🇰🇾
+42,Central African Republic,CAF,CF,+236,XAF,7,21,🇨🇫
+43,Chad,TCD,TD,+235,XAF,15,19,🇹🇩
+44,Chile,CHL,CL,+56,CLP,-30,-71,🇨🇱
+45,China,CHN,CN,+86,CNY,35,105,🇨🇳
+46,Christmas Island,CXR,CX,+61,AUD,-10.5,105.66666666,🇨🇽
+47,Cocos (Keeling) Islands,CCK,CC,+61,AUD,-12.5,96.83333333,🇨🇨
+48,Colombia,COL,CO,+57,COP,4,-72,🇨🇴
+49,Comoros,COM,KM,+269,KMF,-12.16666666,44.25,🇰🇲
+50,Congo,COG,CG,+242,XAF,-1,15,🇨🇬
+52,Cook Islands,COK,CK,+682,NZD,-21.23333333,-159.76666666,🇨🇰
+53,Costa Rica,CRI,CR,+506,CRC,10,-84,🇨🇷
+54,Cote D'Ivoire (Ivory Coast),CIV,CI,+225,XOF,8,-5,🇨🇮
+55,Croatia,HRV,HR,+385,HRK,45.16666666,15.5,🇭🇷
+56,Cuba,CUB,CU,+53,CUP,21.5,-80,🇨🇺
+249,Curaçao,CUW,CW,+599,ANG,12.116667,-68.933333,🇨🇼
+57,Cyprus,CYP,CY,+357,EUR,35,33,🇨🇾
+58,Czech Republic,CZE,CZ,+420,CZK,49.75,15.5,🇨🇿
+51,Democratic Republic of the Congo,COD,CD,+243,CDF,0,25,🇨🇩
+59,Denmark,DNK,DK,+45,DKK,56,10,🇩🇰
+60,Djibouti,DJI,DJ,+253,DJF,11.5,43,🇩🇯
+61,Dominica,DMA,DM,+1-767,XCD,15.41666666,-61.33333333,🇩🇲
+62,Dominican Republic,DOM,DO,+1-809.+1-829,DOP,19,-70.66666666,🇩🇴
+63,East Timor,TLS,TL,+670,USD,-8.83333333,125.91666666,🇹🇱
+64,Ecuador,ECU,EC,+593,USD,-2,-77.5,🇪🇨
+65,Egypt,EGY,EG,+20,EGP,27,30,🇪🇬
+66,El Salvador,SLV,SV,+503,USD,13.83333333,-88.91666666,🇸🇻
+67,Equatorial Guinea,GNQ,GQ,+240,XAF,2,10,🇬🇶
+68,Eritrea,ERI,ER,+291,ERN,15,39,🇪🇷
+69,Estonia,EST,EE,+372,EUR,59,26,🇪🇪
+70,Ethiopia,ETH,ET,+251,ETB,8,38,🇪🇹
+71,Falkland Islands,FLK,FK,+500,FKP,-51.75,-59,🇫🇰
+72,Faroe Islands,FRO,FO,+298,DKK,62,-7,🇫🇴
+73,Fiji Islands,FJI,FJ,+679,FJD,-18,175,🇫🇯
+74,Finland,FIN,FI,+358,EUR,64,26,🇫🇮
+75,France,FRA,FR,+33,EUR,46,2,🇫🇷
+76,French Guiana,GUF,GF,+594,EUR,4,-53,🇬🇫
+77,French Polynesia,PYF,PF,+689,XPF,-15,-140,🇵🇫
+78,French Southern Territories,ATF,TF,+262,EUR,-49.25,69.167,🇹🇫
+79,Gabon,GAB,GA,+241,XAF,-1,11.75,🇬🇦
+80,Gambia The,GMB,GM,+220,GMD,13.46666666,-16.56666666,🇬🇲
+81,Georgia,GEO,GE,+995,GEL,42,43.5,🇬🇪
+82,Germany,DEU,DE,+49,EUR,51,9,🇩🇪
+83,Ghana,GHA,GH,+233,GHS,8,-2,🇬🇭
+84,Gibraltar,GIB,GI,+350,GIP,36.13333333,-5.35,🇬🇮
+85,Greece,GRC,GR,+30,EUR,39,22,🇬🇷
+86,Greenland,GRL,GL,+299,DKK,72,-40,🇬🇱
+87,Grenada,GRD,GD,+1-473,XCD,12.11666666,-61.66666666,🇬🇩
+88,Guadeloupe,GLP,GP,+590,EUR,16.25,-61.583333,🇬🇵
+89,Guam,GUM,GU,+1-671,USD,13.46666666,144.78333333,🇬🇺
+90,Guatemala,GTM,GT,+502,GTQ,15.5,-90.25,🇬🇹
+91,Guernsey and Alderney,GGY,GG,+44-1481,GBP,49.46666666,-2.58333333,🇬🇬
+92,Guinea,GIN,GN,+224,GNF,11,-10,🇬🇳
+93,Guinea-Bissau,GNB,GW,+245,XOF,12,-15,🇬🇼
+94,Guyana,GUY,GY,+592,GYD,5,-59,🇬🇾
+95,Haiti,HTI,HT,+509,HTG,19,-72.41666666,🇭🇹
+96,Heard Island and McDonald Islands,HMD,HM,+672,AUD,-53.1,72.51666666,🇭🇲
+97,Honduras,HND,HN,+504,HNL,15,-86.5,🇭🇳
+98,Hong Kong S.A.R.,HKG,HK,+852,HKD,22.25,114.16666666,🇭🇰
+99,Hungary,HUN,HU,+36,HUF,47,20,🇭🇺
+100,Iceland,ISL,IS,+354,ISK,65,-18,🇮🇸
+101,India,IND,IN,+91,INR,20,77,🇮🇳
+102,Indonesia,IDN,ID,+62,IDR,-5,120,🇮🇩
+103,Iran,IRN,IR,+98,IRR,32,53,🇮🇷
+104,Iraq,IRQ,IQ,+964,IQD,33,44,🇮🇶
+105,Ireland,IRL,IE,+353,EUR,53,-8,🇮🇪
+106,Israel,ISR,IL,+972,ILS,31.5,34.75,🇮🇱
+107,Italy,ITA,IT,+39,EUR,42.83333333,12.83333333,🇮🇹
+108,Jamaica,JAM,JM,+1-876,JMD,18.25,-77.5,🇯🇲
+109,Japan,JPN,JP,+81,JPY,36,138,🇯🇵
+110,Jersey,JEY,JE,+44-1534,GBP,49.25,-2.16666666,🇯🇪
+111,Jordan,JOR,JO,+962,JOD,31,36,🇯🇴
+112,Kazakhstan,KAZ,KZ,+7,KZT,48,68,🇰🇿
+113,Kenya,KEN,KE,+254,KES,1,38,🇰🇪
+114,Kiribati,KIR,KI,+686,AUD,1.41666666,173,🇰🇮
+248,Kosovo,XKX,XK,+383,EUR,42.5612909,20.3403035,🇽🇰
+117,Kuwait,KWT,KW,+965,KWD,29.5,45.75,🇰🇼
+118,Kyrgyzstan,KGZ,KG,+996,KGS,41,75,🇰🇬
+119,Laos,LAO,LA,+856,LAK,18,105,🇱🇦
+120,Latvia,LVA,LV,+371,EUR,57,25,🇱🇻
+121,Lebanon,LBN,LB,+961,LBP,33.83333333,35.83333333,🇱🇧
+122,Lesotho,LSO,LS,+266,LSL,-29.5,28.5,🇱🇸
+123,Liberia,LBR,LR,+231,LRD,6.5,-9.5,🇱🇷
+124,Libya,LBY,LY,+218,LYD,25,17,🇱🇾
+125,Liechtenstein,LIE,LI,+423,CHF,47.26666666,9.53333333,🇱🇮
+126,Lithuania,LTU,LT,+370,EUR,56,24,🇱🇹
+127,Luxembourg,LUX,LU,+352,EUR,49.75,6.16666666,🇱🇺
+128,Macau S.A.R.,MAC,MO,+853,MOP,22.16666666,113.55,🇲🇴
+129,Macedonia,MKD,MK,+389,MKD,41.83333333,22,🇲🇰
+130,Madagascar,MDG,MG,+261,MGA,-20,47,🇲🇬
+131,Malawi,MWI,MW,+265,MWK,-13.5,34,🇲🇼
+132,Malaysia,MYS,MY,+60,MYR,2.5,112.5,🇲🇾
+133,Maldives,MDV,MV,+960,MVR,3.25,73,🇲🇻
+134,Mali,MLI,ML,+223,XOF,17,-4,🇲🇱
+135,Malta,MLT,MT,+356,EUR,35.83333333,14.58333333,🇲🇹
+136,Man (Isle of),IMN,IM,+44-1624,GBP,54.25,-4.5,🇮🇲
+137,Marshall Islands,MHL,MH,+692,USD,9,168,🇲🇭
+138,Martinique,MTQ,MQ,+596,EUR,14.666667,-61,🇲🇶
+139,Mauritania,MRT,MR,+222,MRO,20,-12,🇲🇷
+140,Mauritius,MUS,MU,+230,MUR,-20.28333333,57.55,🇲🇺
+141,Mayotte,MYT,YT,+262,EUR,-12.83333333,45.16666666,🇾🇹
+142,Mexico,MEX,MX,+52,MXN,23,-102,🇲🇽
+143,Micronesia,FSM,FM,+691,USD,6.91666666,158.25,🇫🇲
+144,Moldova,MDA,MD,+373,MDL,47,29,🇲🇩
+145,Monaco,MCO,MC,+377,EUR,43.73333333,7.4,🇲🇨
+146,Mongolia,MNG,MN,+976,MNT,46,105,🇲🇳
+147,Montenegro,MNE,ME,+382,EUR,42.5,19.3,🇲🇪
+148,Montserrat,MSR,MS,+1-664,XCD,16.75,-62.2,🇲🇸
+149,Morocco,MAR,MA,+212,MAD,32,-5,🇲🇦
+150,Mozambique,MOZ,MZ,+258,MZN,-18.25,35,🇲🇿
+151,Myanmar,MMR,MM,+95,MMK,22,98,🇲🇲
+152,Namibia,NAM,NA,+264,NAD,-22,17,🇳🇦
+153,Nauru,NRU,NR,+674,AUD,-0.53333333,166.91666666,🇳🇷
+154,Nepal,NPL,NP,+977,NPR,28,84,🇳🇵
+156,Netherlands,NLD,NL,+31,EUR,52.5,5.75,🇳🇱
+157,New Caledonia,NCL,NC,+687,XPF,-21.5,165.5,🇳🇨
+158,New Zealand,NZL,NZ,+64,NZD,-41,174,🇳🇿
+159,Nicaragua,NIC,NI,+505,NIO,13,-85,🇳🇮
+160,Niger,NER,NE,+227,XOF,16,8,🇳🇪
+161,Nigeria,NGA,NG,+234,NGN,10,8,🇳🇬
+162,Niue,NIU,NU,+683,NZD,-19.03333333,-169.86666666,🇳🇺
+163,Norfolk Island,NFK,NF,+672,AUD,-29.03333333,167.95,🇳🇫
+115,North Korea,PRK,KP,+850,KPW,40,127,🇰🇵
+164,Northern Mariana Islands,MNP,MP,+1-670,USD,15.2,145.75,🇲🇵
+165,Norway,NOR,NO,+47,NOK,62,10,🇳🇴
+166,Oman,OMN,OM,+968,OMR,21,57,🇴🇲
+167,Pakistan,PAK,PK,+92,PKR,30,70,🇵🇰
+168,Palau,PLW,PW,+680,USD,7.5,134.5,🇵🇼
+169,Palestinian Territory Occupied,PSE,PS,+970,ILS,31.9,35.2,🇵🇸
+170,Panama,PAN,PA,+507,PAB,9,-80,🇵🇦
+171,Papua new Guinea,PNG,PG,+675,PGK,-6,147,🇵🇬
+172,Paraguay,PRY,PY,+595,PYG,-23,-58,🇵🇾
+173,Peru,PER,PE,+51,PEN,-10,-76,🇵🇪
+174,Philippines,PHL,PH,+63,PHP,13,122,🇵🇭
+175,Pitcairn Island,PCN,PN,+870,NZD,-25.06666666,-130.1,🇵🇳
+176,Poland,POL,PL,+48,PLN,52,20,🇵🇱
+177,Portugal,PRT,PT,+351,EUR,39.5,-8,🇵🇹
+178,Puerto Rico,PRI,PR,+1-787.+1-939,USD,18.25,-66.5,🇵🇷
+179,Qatar,QAT,QA,+974,QAR,25.5,51.25,🇶🇦
+180,Reunion,REU,RE,+262,EUR,-21.15,55.5,🇷🇪
+181,Romania,ROU,RO,+40,RON,46,25,🇷🇴
+182,Russia,RUS,RU,+7,RUB,60,100,🇷🇺
+183,Rwanda,RWA,RW,+250,RWF,-2,30,🇷🇼
+184,Saint Helena,SHN,SH,+290,SHP,-15.95,-5.7,🇸🇭
+185,Saint Kitts And Nevis,KNA,KN,+1-869,XCD,17.33333333,-62.75,🇰🇳
+186,Saint Lucia,LCA,LC,+1-758,XCD,13.88333333,-60.96666666,🇱🇨
+187,Saint Pierre and Miquelon,SPM,PM,+508,EUR,46.83333333,-56.33333333,🇵🇲
+188,Saint Vincent And The Grenadines,VCT,VC,+1-784,XCD,13.25,-61.2,🇻🇨
+189,Saint-Barthelemy,BLM,BL,+590,EUR,18.5,-63.41666666,🇧🇱
+190,Saint-Martin (French part),MAF,MF,+590,EUR,18.08333333,-63.95,🇲🇫
+191,Samoa,WSM,WS,+685,WST,-13.58333333,-172.33333333,🇼🇸
+192,San Marino,SMR,SM,+378,EUR,43.76666666,12.41666666,🇸🇲
+193,Sao Tome and Principe,STP,ST,+239,STD,1,7,🇸🇹
+194,Saudi Arabia,SAU,SA,+966,SAR,25,45,🇸🇦
+195,Senegal,SEN,SN,+221,XOF,14,-14,🇸🇳
+196,Serbia,SRB,RS,+381,RSD,44,21,🇷🇸
+197,Seychelles,SYC,SC,+248,SCR,-4.58333333,55.66666666,🇸🇨
+198,Sierra Leone,SLE,SL,+232,SLL,8.5,-11.5,🇸🇱
+199,Singapore,SGP,SG,+65,SGD,1.36666666,103.8,🇸🇬
+250,Sint Maarten (Dutch part),SXM,SX,+1721,ANG,18.033333,-63.05,🇸🇽
+200,Slovakia,SVK,SK,+421,EUR,48.66666666,19.5,🇸🇰
+201,Slovenia,SVN,SI,+386,EUR,46.11666666,14.81666666,🇸🇮
+202,Solomon Islands,SLB,SB,+677,SBD,-8,159,🇸🇧
+203,Somalia,SOM,SO,+252,SOS,10,49,🇸🇴
+204,South Africa,ZAF,ZA,+27,ZAR,-29,24,🇿🇦
+205,South Georgia,SGS,GS,+500,GBP,-54.5,-37,🇬🇸
+116,South Korea,KOR,KR,+82,KRW,37,127.5,🇰🇷
+206,South Sudan,SSD,SS,+211,SSP,7,30,🇸🇸
+207,Spain,ESP,ES,+34,EUR,40,-4,🇪🇸
+208,Sri Lanka,LKA,LK,+94,LKR,7,81,🇱🇰
+209,Sudan,SDN,SD,+249,SDG,15,30,🇸🇩
+210,Suriname,SUR,SR,+597,SRD,4,-56,🇸🇷
+211,Svalbard And Jan Mayen Islands,SJM,SJ,+47,NOK,78,20,🇸🇯
+212,Swaziland,SWZ,SZ,+268,SZL,-26.5,31.5,🇸🇿
+213,Sweden,SWE,SE,+46,SEK,62,15,🇸🇪
+214,Switzerland,CHE,CH,+41,CHF,47,8,🇨🇭
+215,Syria,SYR,SY,+963,SYP,35,38,🇸🇾
+216,Taiwan,TWN,TW,+886,TWD,23.5,121,🇹🇼
+217,Tajikistan,TJK,TJ,+992,TJS,39,71,🇹🇯
+218,Tanzania,TZA,TZ,+255,TZS,-6,35,🇹🇿
+219,Thailand,THA,TH,+66,THB,15,100,🇹🇭
+17,The Bahamas,BHS,BS,+1-242,BSD,24.25,-76,🇧🇸
+220,Togo,TGO,TG,+228,XOF,8,1.16666666,🇹🇬
+221,Tokelau,TKL,TK,+690,NZD,-9,-172,🇹🇰
+222,Tonga,TON,TO,+676,TOP,-20,-175,🇹🇴
+223,Trinidad And Tobago,TTO,TT,+1-868,TTD,11,-61,🇹🇹
+224,Tunisia,TUN,TN,+216,TND,34,9,🇹🇳
+225,Turkey,TUR,TR,+90,TRY,39,35,🇹🇷
+226,Turkmenistan,TKM,TM,+993,TMT,40,60,🇹🇲
+227,Turks And Caicos Islands,TCA,TC,+1-649,USD,21.75,-71.58333333,🇹🇨
+228,Tuvalu,TUV,TV,+688,AUD,-8,178,🇹🇻
+229,Uganda,UGA,UG,+256,UGX,1,32,🇺🇬
+230,Ukraine,UKR,UA,+380,UAH,49,32,🇺🇦
+231,United Arab Emirates,ARE,AE,+971,AED,24,54,🇦🇪
+232,United Kingdom,GBR,GB,+44,GBP,54,-2,🇬🇧
+233,United States,USA,US,+1,USD,38,-97,🇺🇸
+234,United States Minor Outlying Islands,UMI,UM,+1,USD,0,0,🇺🇲
+235,Uruguay,URY,UY,+598,UYU,-33,-56,🇺🇾
+236,Uzbekistan,UZB,UZ,+998,UZS,41,64,🇺🇿
+237,Vanuatu,VUT,VU,+678,VUV,-16,167,🇻🇺
+238,Vatican City State (Holy See),VAT,VA,+379,EUR,41.9,12.45,🇻🇦
+239,Venezuela,VEN,VE,+58,VEF,8,-66,🇻🇪
+240,Vietnam,VNM,VN,+84,VND,16.16666666,107.83333333,🇻🇳
+241,Virgin Islands (British),VGB,VG,+1-284,USD,18.431383,-64.62305,🇻🇬
+242,Virgin Islands (US),VIR,VI,+1-340,USD,18.34,-64.93,🇻🇮
+243,Wallis And Futuna Islands,WLF,WF,+681,XPF,-13.3,-176.2,🇼🇫
+244,Western Sahara,ESH,EH,+212,MAD,24.5,-13,🇪🇭
+245,Yemen,YEM,YE,+967,YER,15,48,🇾🇪
+246,Zambia,ZMB,ZM,+260,ZMW,-15,30,🇿🇲
+247,Zimbabwe,ZWE,ZW,+263,ZWL,-20,30,🇿🇼

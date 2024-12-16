@@ -1,0 +1,5 @@
+export enum TokenType {
+  REFRESh_TOKEN = 'REFRESh_TOKEN',
+  ACCESS_TOKEN = 'ACCESS_TOKEN',
+  RESET_PASSWORD = 'RESET_PASSWORD',
+}

@@ -1,0 +1,23 @@
+{
+  "NOT_EMPTY": "This field cannot be left empty.",
+  "INVALID_EMAIL": "Please enter a valid email address.",
+  "INVALID_BOOLEAN": "This field requires a 'True' or 'False' value.",
+  "MIN": "The value should be at least {constraints.0}.",
+  "MAX": "The value should not exceed {constraints.0}.",
+  "MIN_LENGTH": "The input should have a minimum length of {constraints.0} characters.",
+  "MAX_LENGTH": "The input should have a maximum length of {constraints.0} characters.",
+  "LENGTH": "The input should have a length of {constraints.0} characters.",
+  "ENUM": "The value should be one of the following: {enum}.",
+  "STRING": "The input must be in text format.",
+  "POSITIVE": "The value should be a positive number.",
+  "PHONE_NUMBER": "Please enter a valid phone number.",
+  "ARRAY": "This field expects multiple values.",
+  "ARRAY_MIN_SIZE": "You should provide at least {constraints.0} items.",
+  "ARRAY_MAX_SIZE": "You should provide no more than {constraints.0} items.",
+  "PATTERN": "The value you've entered doesn't match the required format.",
+  "NUMBER_STRING": "The input should be numeric.",
+  "BOOLEAN": "This field requires a 'True' or 'False' value.",
+  "OBJECT": "This field requires structured data.",
+  "DATE": "Please enter a valid date.",
+  "NOT_EMPTY_OBJECT": "This field should not be an empty structured data."
+}

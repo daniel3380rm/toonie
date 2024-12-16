@@ -1,0 +1,6 @@
+{
+    "NOT_FOUND": "Sorry, the requested document could not be found.",
+    "FILE_SIZE_TO_LARGE": "The file '{fileName}' is too large. Please ensure it's smaller than {sizeAvailable}.",
+    "FILE_NOT_FOUND": "Sorry, the requested file '{fileName}' could not be found.",
+    "FILE_MIMETYPE_NOT_AVAILABLE": "The file '{fileName}' has a format that's not supported. Please upload files with the following formats: {mimetype}."
+}

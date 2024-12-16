@@ -1,0 +1,4 @@
+export enum SmsOperations {
+  CONFIRM_CODE = 'CONFIRM_CODE',
+  FORGET_PASSWORD = 'FORGET_PASSWORD',
+}

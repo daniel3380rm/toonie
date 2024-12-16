@@ -1,0 +1,6 @@
+{
+    "NOT_FOUND": "User profile not found",
+    "CREATED_BEFORE": "User created profile before for the current user",
+    "LIST_NOT_FOUND": "User profile list not found",
+    "INITIALIZE_TIME_EXPIRED": "User profile initialize time expired"
+}

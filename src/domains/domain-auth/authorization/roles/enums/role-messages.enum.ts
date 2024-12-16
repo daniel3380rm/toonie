@@ -1,0 +1,6 @@
+export enum RoleErrors {
+  LIST_OF_ROLES_NOT_FOUND = 'role.LIST_OF_ROLES_NOT_FOUND',
+  NOT_FOUND = 'role.NOT_FOUND',
+  NOT_ASSIGNED = 'role.NOT_ASSIGNED',
+  NAME_DUPLICATED = 'role.NAME_DUPLICATED',
+}

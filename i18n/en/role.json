@@ -1,0 +1,6 @@
+{
+    "LIST_OF_ROLES_NOT_FOUND": "Some roles from the list couldn't be retrieved. Please try again.",
+    "NOT_FOUND": "Sorry, the requested role could not be found.",
+    "NOT_ASSIGNED": "The selected role has not been assigned. Please assign it before proceeding.",
+    "NAME_DUPLICATED": "The role name you've chosen is already in use. Please select a different name."
+}
