@@ -19,7 +19,8 @@ RUN npm install --only=production
 
 # کپی کردن کل فولدر dist
 COPY --from=builder /app/dist ./dist
-
+COPY --from=builder /app/dist ./dist
+COPY --from=builder /app/i18n ./i18n
 # Expose the application port
 EXPOSE 3500
 
