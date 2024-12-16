@@ -12,7 +12,6 @@ export class FileHelper {
     const csvParsed = await parse(csvData, {
       header: true,
       skipEmptyLines: true,
-      // dynamicTyping: true,
       transform: (value) => {
         if (value === 'TRUE') {
           return true;
@@ -27,42 +26,37 @@ export class FileHelper {
           return value;
         }
       },
-      // transformHeader: (header) => header.toLowerCase().replace('#', '').trim(),
       complete: (results) => results.data,
     });
 
     return <T>csvParsed.data;
   }
 
-  getPath(dir: string) {
+  getPath(dir: string): Promise<string[]> {
     const pattern = '/**/*';
-
     return new Promise((resolve, reject) => {
-      const mg = new Glob(dir + pattern, { mark: true, sync: false }, function (
-        er,
-        matches,
-      ) {
+      new Glob(dir + pattern, { mark: true }, (err, matches) => {
+        if (err) {
+          reject(err);
+          return;
+        }
         resolve(matches);
       });
     });
   }
 
-  async getFilesInDirectory(dir): Promise<string[]> {
-    return new Promise((resolve) => {
+  async getFilesInDirectory(dir: string): Promise<string[]> {
+    const readdirPromise = promisify(readdir);
+    try {
       const path = `${__dirname}/../..`;
-      readdir(`${path}${dir}`, (err, filenames) => {
-        const result = [];
-        if (!err) {
-          filenames.map((item) => {
-            result.push(`${path}${dir}/${item}`);
-          });
-        }
-        resolve(result);
-      });
-    });
+      const filenames = await readdirPromise(`${path}${dir}`);
+      return filenames.map((item) => `${path}${dir}/${item}`);
+    } catch (error) {
+      return [];
+    }
   }
 
-  async writer(data) {
+  async writer(data: string): Promise<void> {
     const writeFile = promisify(fs.writeFile);
     return await writeFile(`${__dirname}/../../logs.txt`, data, 'utf8');
   }
