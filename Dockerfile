@@ -1,22 +1,28 @@
-# Use the official Node.js image
-FROM node:20-alpine AS base
+# Build stage
+FROM node:20-alpine AS builder
 
 RUN apk add --no-cache tzdata
 
-# Set the working directory in the container
 WORKDIR /app
 
-# Copy package.json a nd package-lock.json
-COPY package*.json ./
+COPY package*.json yarn.lock ./
+RUN yarn install --frozen-lockfile
 
-# Install dependencies
-RUN yarn install
-
-# Copy the rest of the application code
 COPY . .
+RUN yarn build
 
-# Expose the application port
+# Production stage
+FROM node:20-alpine AS production
+
+RUN apk add --no-cache tzdata
+
+WORKDIR /app
+
+COPY package*.json yarn.lock ./
+RUN yarn install --production --frozen-lockfile
+
+COPY --from=builder /app/dist ./dist
+
 EXPOSE 3500
 
-# Command to run the application
-CMD ["npm", "run", "start:prod"]
+CMD ["yarn", "start:prod"]
