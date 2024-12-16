@@ -26,4 +26,4 @@ RUN yarn install --production --frozen-lockfile
 EXPOSE 3500
 
 # Command to run the application
-CMD ["yarn", "start:prod"]
+CMD ["npm", "start:prod"]
