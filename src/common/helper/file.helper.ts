@@ -1,5 +1,5 @@
 import { readFileSync, readdir } from 'fs';
-import { Glob } from 'glob';
+import { glob } from 'glob'; // تغییر در import
 import { parse } from 'papaparse';
 import { promisify } from 'util';
 import * as fs from 'fs';
@@ -34,16 +34,11 @@ export class FileHelper {
     return <T>csvParsed.data;
   }
 
-  getPath(dir: string) {
+  async getPath(dir: string) {
     const pattern = '/**/*';
-
-    return new Promise((resolve, reject) => {
-      const mg = new Glob(dir + pattern, { mark: true, sync: false }, function (
-        er,
-        matches,
-      ) {
-        resolve(matches);
-      });
+    return await glob(dir + pattern, {
+      mark: true,
+      nodir: true,
     });
   }
 
