@@ -16,8 +16,8 @@ RUN yarn install --frozen-lockfile
 # Copy the rest of the application code
 COPY . .
 
-# Build the application
-RUN yarn build
+# # Build the application
+# RUN yarn build
 
 # Remove development dependencies
 RUN yarn install --production --frozen-lockfile
@@ -26,4 +26,4 @@ RUN yarn install --production --frozen-lockfile
 EXPOSE 3500
 
 # Command to run the application
-CMD ["npm","run", "start:prod"]
+CMD ["npm", "run", "start:prod"]
