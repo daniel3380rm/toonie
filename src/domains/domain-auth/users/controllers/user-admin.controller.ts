@@ -10,7 +10,7 @@ import {
   Post,
   UseGuards,
 } from '@nestjs/common';
-import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
+import { ApiBearerAuth, ApiOperation, ApiTags } from '@nestjs/swagger';
 import { CreateUserDto } from '../dto/create-user.dto';
 import { UserResponseDto } from '../dto/user-response.dto';
 import { UserPermissions } from '../enums/user-permissions.enum';
@@ -43,8 +43,11 @@ export class UserAdminController {
     return new SuccessResponse({ data: new UserResponseDto(userFound) });
   }
 
-  @PermissionType(UserPermissions.READ_USER)
+  // @PermissionType(UserPermissions.READ_USER)
   @ApiPaginationQuery(UserPaginationConfigConst)
+  @ApiOperation({
+    summary: ' list users',
+  })
   @Get()
   async findAll(@Paginate() query: PaginateQuery) {
     const response = await this.usersService.findAll(query);

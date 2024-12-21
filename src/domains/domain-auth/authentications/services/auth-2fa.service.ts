@@ -88,6 +88,8 @@ export class AuthTwoFAService {
     twoFAType: User2FAType;
     data: any;
   }> {
+    console.log(havSession);
+
     if ((!twoFAType || twoFAType === User2FAType.NONE) && havSession) {
       const { accessToken, refreshToken, session } =
         await this.authHelperService.generateSession(
@@ -96,7 +98,9 @@ export class AuthTwoFAService {
           ip,
           userAgents,
         );
+
       await this.authHelperService.updateLastLogin(session.id);
+
       const data = new AuthenticationDto({
         accessToken,
         refreshToken,

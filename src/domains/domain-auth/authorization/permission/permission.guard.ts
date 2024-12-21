@@ -15,14 +15,17 @@ export class PermissionGuard implements CanActivate {
   ) {}
 
   async canActivate(context: ExecutionContext): Promise<boolean> {
+    console.log('isPublic');
+
     const isPublic = this.isPublic(context);
 
     // if (ConfigConstants.app.env === Environments.DEVELOP) return true;
+    console.log(isPublic);
 
     if (isPublic) return true;
 
     const { id: userId, isAdmin } = context.switchToHttp().getRequest().user;
-
+    console.log(isAdmin);
     if (!isAdmin) return false;
 
     const endPointPermissions =
