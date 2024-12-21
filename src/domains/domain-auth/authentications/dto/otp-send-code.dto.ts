@@ -1,17 +1,19 @@
 import { ApiPropertyOptional } from '@nestjs/swagger';
-import { ValidateIf } from 'class-validator';
+import { IsOptional, ValidateIf } from 'class-validator';
 import { IsString } from 'src/common/decorators/validation/default';
 
 export class OtpSendCodeDto {
   @ApiPropertyOptional()
   // @IsPhoneNumber()
   @IsString()
-  @ValidateIf((o) => !o.email)
+  @IsOptional()
+  @ValidateIf((o) => !o.phoneNumber)
   phoneNumber: string;
 
   @ApiPropertyOptional()
   // @IsEmail({})
   @IsString()
-  @ValidateIf((o) => !o.phoneNumber)
+  @IsOptional()
+  @ValidateIf((o) => !o.email)
   email: string;
 }
