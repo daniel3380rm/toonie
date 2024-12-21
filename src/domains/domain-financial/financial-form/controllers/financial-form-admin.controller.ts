@@ -58,6 +58,28 @@ export class FinancialFormAdminController {
     });
   }
 
+  // TODO : promise
+  @ApiOperation({ summary: 'get all adviser form for user' })
+  @ApiResponse({
+    status: HttpStatus.OK,
+    type: FinancialFormResponseDto,
+  })
+  @ApiPaginationQuery(FinancialFormPaginationConfigConst)
+  @Get('advisor')
+  async findAllAdvisorWithUserId(@Paginate() query: PaginateQuery) {
+    const response = await this.financialFormService.findAllAdvisorWithUserId(
+      query,
+    );
+    return new SuccessResponse({
+      data:
+        response?.data?.map((item) => new FinancialFormResponseDto(item)) ?? [],
+      metadata: {
+        meta: response?.meta ?? null,
+        links: response?.links ?? null,
+      },
+    });
+  }
+
   @ApiOperation({ summary: 'get financial form' })
   @ApiResponse({
     status: HttpStatus.OK,
