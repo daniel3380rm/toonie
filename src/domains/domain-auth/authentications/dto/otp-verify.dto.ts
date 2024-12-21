@@ -14,11 +14,13 @@ export class OtpVerifyDto {
   @ApiPropertyOptional()
   // @IsPhoneNumber()
   @IsString()
+  @IsOptional()
   @ValidateIf((o) => !o.phoneNumber)
   phoneNumber: string;
 
   @ApiPropertyOptional()
   @IsString()
+  @IsOptional()
   @ValidateIf((o) => !o.email)
   email: string;
 
