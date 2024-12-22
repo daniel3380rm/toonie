@@ -27,7 +27,7 @@ export class FileHelper {
           return value;
         }
       },
-      // transformHeader: (header)     => header.toLowerCase().replace('#', '').trim(),
+      // transformHeader: (header)         => header.toLowerCase().replace('#', '').trim(),
       complete: (results) => results.data,
     });
 
