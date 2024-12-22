@@ -35,7 +35,7 @@ async function bootstrap() {
 
   app.useGlobalGuards(new AuthGuard(reflector, userSessionsService));
 
-  // if (env !== 'production') {
+  // if (env ! = = 'production') {
   const options = new DocumentBuilder()
     .setTitle('API')
     .setDescription('API docs')
