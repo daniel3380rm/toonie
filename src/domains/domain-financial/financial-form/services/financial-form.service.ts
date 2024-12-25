@@ -12,6 +12,7 @@ import { EntityCondition } from '../../../../common/types/entity-condition.type'
 import { FinancialFormTimeService } from '../../financial-form-time/services/financial-form-time.service';
 import { ItemStatusFinancialFormTime } from '../../financial-form-time/enums/item-status-financial-form-time.enum';
 import { UsersService } from 'src/domains/domain-auth/users/services/users.service';
+import { generateReferralCode } from 'src/common/helper';
 
 @Injectable()
 export class FinancialFormService {
@@ -28,9 +29,13 @@ export class FinancialFormService {
       id: financialFormTimeId,
       status: ItemStatusFinancialFormTime.Pending,
     });
+    const trackingCode = generateReferralCode();
+
     const financialFormIns = this.financialFormRepository.create({
       ...createDto,
       adviserId: time.userId,
+      trackingCode,
+      financialFormTimeId: financialFormTimeId,
     });
     const financialFormSave = await financialFormIns.save();
     await this.financialFormTimeService.updateStatus(
@@ -71,7 +76,7 @@ export class FinancialFormService {
       return await paginate(query, this.financialFormRepository, {
         ...FinancialFormPaginationConfigConst,
         where: {
-          // adviserId: adviserId,
+          adviserId: adviserId,
         },
       });
     } catch (err) {

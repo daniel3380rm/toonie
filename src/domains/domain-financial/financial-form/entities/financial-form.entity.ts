@@ -86,8 +86,8 @@ export class FinancialFormEntity extends ParentEntity {
   @Column({ default: '' })
   trackingCode: string;
 
-  // @Column({ nullable: true })
-  // financialFormTimeId: number;
+  @Column({ nullable: true })
+  financialFormTimeId: number;
 
   // @OneToOne(() => FinancialFormTimeEntity)
   // @JoinColumn({ name: 'financialFormTimeId' })
@@ -101,7 +101,7 @@ export class FinancialFormEntity extends ParentEntity {
       onDelete: 'SET NULL', // یا 'CASCADE' بسته به نیاز شما
     },
   )
-  @JoinColumn({ name: 'financial_form_time_id' })
+  @JoinColumn({ name: 'financialFormTimeId' })
   financialFormTime: FinancialFormTimeEntity;
 
   @BeforeInsert()

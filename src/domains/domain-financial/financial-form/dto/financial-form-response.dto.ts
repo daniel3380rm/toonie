@@ -56,6 +56,14 @@ export class FinancialFormResponseDto extends BaseResponseWithActionDates {
   @ApiResponseProperty()
   otherFinancialGoal: string;
 
+  @ApiResponseProperty()
+  trackingCode: string;
+
+  @ApiResponseProperty()
+  jitsi: string;
+
+  @ApiResponseProperty()
+  financialFormTimeId: number;
   constructor(init?: Partial<FinancialFormResponseDto>) {
     super(init);
     this.name = init?.name;
@@ -73,5 +81,7 @@ export class FinancialFormResponseDto extends BaseResponseWithActionDates {
     this.savingsRate = init?.savingsRate;
     this.financialGoals = init?.financialGoals;
     this.otherFinancialGoal = init?.otherFinancialGoal;
+    this.jitsi = init?.trackingCode;
+    this.financialFormTimeId = init?.financialFormTimeId;
   }
 }
