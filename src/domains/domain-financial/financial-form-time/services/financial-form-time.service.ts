@@ -1,6 +1,6 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
+import { In, IsNull, Raw, Repository } from 'typeorm';
 import { CreateFinancialFormTimeDto } from '../dto/create-financial-form-time.dto';
 import { FinancialFormTimeEntity } from '../entities/financial-form-time.entity';
 import { paginate, Paginated, PaginateQuery } from 'nestjs-paginate';
@@ -40,7 +40,17 @@ export class FinancialFormTimeService {
   ): Promise<Paginated<FinancialFormTimeEntity>> {
     return await paginate(query, this.financialFormTimeRepository, {
       ...FinancialFormTimePaginationConfigConst,
-      // where: { userId },
+      where: {
+        id: In(
+          await this.financialFormTimeRepository
+            .createQueryBuilder('ft')
+            .select('MIN(ft.id)', 'id')
+            .groupBy('ft.time')
+            .getRawMany()
+            .then((results) => results.map((r) => r.id)),
+        ),
+        financialFormId: IsNull(),
+      },
     });
   }
 
@@ -56,7 +66,7 @@ export class FinancialFormTimeService {
   async updateStatus(id: number, status: number, financialFormId: number) {
     const financialFormFound = await this.financialFormTimeRepository.update(
       id,
-      { status },
+      { status, financialFormId },
     );
     return financialFormFound;
   }

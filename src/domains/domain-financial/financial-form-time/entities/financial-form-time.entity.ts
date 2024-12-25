@@ -12,8 +12,8 @@ export class FinancialFormTimeEntity extends ParentEntity {
   @Column({ default: ItemStatusFinancialFormTime.Pending })
   status!: ItemStatusFinancialFormTime;
 
-  // @Column({ nullable: true })
-  // financialFormId: number;
+  @Column({ nullable: true })
+  financialFormId: number;
 
   // @OneToOne(() => FinancialFormEntity)
   // @JoinColumn({ name: 'financialFormId' })

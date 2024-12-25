@@ -58,7 +58,7 @@ export class FinancialFormAdminController {
     });
   }
 
-  // TODO :   pro mise
+  // TODO : promise
   @ApiOperation({ summary: 'get all adviser form for user' })
   @ApiResponse({
     status: HttpStatus.OK,

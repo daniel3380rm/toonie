@@ -11,10 +11,18 @@ export const FinancialFormTimePaginationConfigConst: PaginateConfig<FinancialFor
     defaultSortBy: [['time', 'ASC']],
     relations: ['user'],
     filterableColumns: {
-      time: [FilterOperator.EQ, FilterOperator.GT, FilterOperator.LT],
+      time: [
+        FilterOperator.EQ,
+        FilterOperator.GT,
+        FilterOperator.LT,
+        FilterOperator.ILIKE,
+        FilterOperator.IN,
+        FilterOperator.CONTAINS,
+      ],
       status: [FilterOperator.EQ],
       // Enable individual operators on a column
       id: [FilterOperator.EQ, FilterSuffix.NOT],
       userId: true,
+      advise: true,
     },
   };

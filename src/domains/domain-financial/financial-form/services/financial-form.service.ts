@@ -30,7 +30,7 @@ export class FinancialFormService {
     });
     const financialFormIns = this.financialFormRepository.create({
       ...createDto,
-      // adviser: time.userId,
+      adviserId: time.userId,
     });
     const financialFormSave = await financialFormIns.save();
     await this.financialFormTimeService.updateStatus(

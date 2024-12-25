@@ -14,10 +14,15 @@ export class FinancialFormTimeResponseDto extends BaseResponseWithActionDates {
   @Transform(({ obj }) => ItemStatusFinancialFormTime[obj.status as number])
   itemStatus: string;
 
+  @ApiResponseProperty()
+  userId: number;
+
   constructor(init?: Partial<FinancialFormTimeResponseDto>) {
     super(init);
     this.time = init?.time;
     this.status = init?.status;
     this.itemStatus = ItemStatusFinancialFormTime[init?.status];
+    this.userId = init?.userId;
+    this.userId = init?.userId;
   }
 }
