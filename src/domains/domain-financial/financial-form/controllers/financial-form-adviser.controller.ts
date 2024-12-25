@@ -62,7 +62,7 @@ export class FinancialFormAdviserController {
     });
   }
 
-  @ApiOperation({ summary: 'get financial form for user' })
+  @ApiOperation({ summary: 'get financial  form for user' })
   @ApiResponse({
     status: HttpStatus.OK,
     type: FinancialFormResponseDto,
