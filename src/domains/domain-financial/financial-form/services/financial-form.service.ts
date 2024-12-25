@@ -67,10 +67,16 @@ export class FinancialFormService {
     adviserId: number,
     query: PaginateQuery,
   ): Promise<Paginated<FinancialFormEntity>> {
-    return await paginate(query, this.financialFormRepository, {
-      ...FinancialFormPaginationConfigConst,
-      where: {},
-    });
+    try {
+      return await paginate(query, this.financialFormRepository, {
+        ...FinancialFormPaginationConfigConst,
+        where: {
+          // adviserId: adviserId,
+        },
+      });
+    } catch (err) {
+      console.log(err);
+    }
   }
 
   async findOne(fields: EntityCondition<FinancialFormEntity>) {

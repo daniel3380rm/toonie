@@ -78,7 +78,7 @@ export class FinancialFormEntity extends ParentEntity {
   adviserId: number;
 
   @ManyToOne(() => UserEntity, {
-    nullable: false,
+    nullable: true,
   })
   @JoinColumn({ name: 'adviserId' })
   adviser: UserEntity;
