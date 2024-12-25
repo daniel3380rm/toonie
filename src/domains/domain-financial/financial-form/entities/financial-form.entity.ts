@@ -77,9 +77,7 @@ export class FinancialFormEntity extends ParentEntity {
   @Column({ nullable: true })
   adviserId: number;
 
-  @ManyToOne(() => UserEntity, {
-    nullable: true,
-  })
+  @ManyToOne(() => UserEntity)
   @JoinColumn({ name: 'adviserId' })
   adviser: UserEntity;
 
@@ -88,10 +86,6 @@ export class FinancialFormEntity extends ParentEntity {
 
   @Column({ nullable: true })
   financialFormTimeId: number;
-
-  // @OneToOne(() => FinancialFormTimeEntity)
-  // @JoinColumn({ name: 'financialFormTimeId' })
-  // financialFormTime: FinancialFormTimeEntity;
 
   @OneToOne(
     () => FinancialFormTimeEntity,

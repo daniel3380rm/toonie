@@ -57,7 +57,7 @@ export class FinancialFormController {
       user?.id,
       query,
     );
-
+    console.log(response);
     return new SuccessResponse({
       data:
         response?.data?.map((item) => new FinancialFormResponseDto(item)) ?? [],

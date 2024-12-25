@@ -9,6 +9,8 @@ import { InvestmentStatusEnum } from '../enums/investment-status.enum';
 import { BankruptcyHistoryEnum } from '../enums/bankruptcy-history.enum';
 import { SavingsRateEnum } from '../enums/savings-rate.enum';
 import { ApiResponseProperty } from '@nestjs/swagger';
+import { UserResponseDto } from 'src/domains/domain-auth/users/dto/user-response.dto';
+import { FinancialFormTimeResponseDto } from '../../financial-form-time/dto/financial-form-response.dto';
 
 export class FinancialFormResponseDto extends BaseResponseWithActionDates {
   @ApiResponseProperty()
@@ -64,6 +66,17 @@ export class FinancialFormResponseDto extends BaseResponseWithActionDates {
 
   @ApiResponseProperty()
   financialFormTimeId: number;
+
+  @ApiResponseProperty({ type: FinancialFormTimeResponseDto })
+  financialFormTime: FinancialFormTimeResponseDto;
+
+  @ApiResponseProperty({ type: UserResponseDto })
+  user: UserResponseDto;
+
+  @ApiResponseProperty({ type: UserResponseDto })
+  adviser: UserResponseDto;
+
+  // TODO : advice / user / time / status
   constructor(init?: Partial<FinancialFormResponseDto>) {
     super(init);
     this.name = init?.name;
@@ -83,5 +96,12 @@ export class FinancialFormResponseDto extends BaseResponseWithActionDates {
     this.otherFinancialGoal = init?.otherFinancialGoal;
     this.jitsi = init?.trackingCode;
     this.financialFormTimeId = init?.financialFormTimeId;
+    this.user = init.user ? new UserResponseDto(init.user) : null;
+    this.adviser = init.adviser ? new UserResponseDto(init.adviser) : null;
+    this.financialFormTime = init.financialFormTime
+      ? new FinancialFormTimeResponseDto(init.financialFormTime)
+      : null;
+    console.log(this);
+    console.log(this.adviser);
   }
 }

@@ -2,6 +2,7 @@ import { BaseResponseWithActionDates } from 'src/common/dto/response/base-respon
 import { ApiResponseProperty } from '@nestjs/swagger';
 import { Transform } from 'class-transformer';
 import { ItemStatusFinancialFormTime } from '../enums/item-status-financial-form-time.enum';
+import { UserResponseDto } from 'src/domains/domain-auth/users/dto/user-response.dto';
 
 export class FinancialFormTimeResponseDto extends BaseResponseWithActionDates {
   @ApiResponseProperty()
@@ -12,10 +13,13 @@ export class FinancialFormTimeResponseDto extends BaseResponseWithActionDates {
 
   @ApiResponseProperty()
   @Transform(({ obj }) => ItemStatusFinancialFormTime[obj.status as number])
-  itemStatus: string;
+  itemStatus?: string;
 
   @ApiResponseProperty()
   userId: number;
+
+  @ApiResponseProperty({ type: UserResponseDto })
+  user: UserResponseDto;
 
   constructor(init?: Partial<FinancialFormTimeResponseDto>) {
     super(init);
@@ -23,6 +27,6 @@ export class FinancialFormTimeResponseDto extends BaseResponseWithActionDates {
     this.status = init?.status;
     this.itemStatus = ItemStatusFinancialFormTime[init?.status];
     this.userId = init?.userId;
-    this.userId = init?.userId;
+    this.user = init.user ? new UserResponseDto(init.user) : null;
   }
 }
