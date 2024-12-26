@@ -103,6 +103,7 @@ export class FinancialFormAdviserController {
     @GetUser()
     user: IUser,
   ) {
+    console.log(updateDto);
     await this.financialFormService.updateStatus(id, {
       userId: user?.id,
       ...updateDto,
