@@ -67,6 +67,9 @@ export class FinancialFormResponseDto extends BaseResponseWithActionDates {
   @ApiResponseProperty()
   financialFormTimeId: number;
 
+  @ApiResponseProperty()
+  status: number;
+
   @ApiResponseProperty({ type: FinancialFormTimeResponseDto })
   financialFormTime: FinancialFormTimeResponseDto;
 
@@ -95,6 +98,7 @@ export class FinancialFormResponseDto extends BaseResponseWithActionDates {
     this.financialGoals = init?.financialGoals;
     this.otherFinancialGoal = init?.otherFinancialGoal;
     this.jitsi = init?.trackingCode;
+    this.status = init?.status;
     this.financialFormTimeId = init?.financialFormTimeId;
     this.user = init.user ? new UserResponseDto(init.user) : null;
     this.adviser = init.adviser ? new UserResponseDto(init.adviser) : null;
