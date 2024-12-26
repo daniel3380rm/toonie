@@ -105,6 +105,7 @@ export class FinancialFormService {
   }
 
   async updateStatus(id: number, updateDto: UpdateStatusFinancialFormDto) {
+    console.log(updateDto);
     const financialFormFound = await this.financialFormRepository.findOne({
       where: { id, adviserId: updateDto.userId },
     });

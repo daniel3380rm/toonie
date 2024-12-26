@@ -4,7 +4,6 @@ export class UpdateStatusFinancialFormDto {
   @ApiProperty({
     description: 'status',
     example: '3',
-    required: false,
   })
   status: number;
 

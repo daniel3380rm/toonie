@@ -94,12 +94,12 @@ export class FinancialFormAdviserController {
     type: FinancialFormResponseDto,
   })
   @ApiBody({
-    type: UpdateFinancialFormDto,
+    type: UpdateStatusFinancialFormDto,
   })
-  @Patch(':id')
+  @Patch('status/:id')
   async updateAdvise(
     @Param() { id }: IdDto,
-    updateDto: UpdateStatusFinancialFormDto,
+    @Body() updateDto: UpdateStatusFinancialFormDto,
     @GetUser()
     user: IUser,
   ) {
