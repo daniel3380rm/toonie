@@ -31,7 +31,11 @@ export class FinancialFormTimeService {
       });
     });
     await Promise.all(promises);
-    return true;
+    return {
+      day,
+      startTime,
+      endTime,
+    };
   }
 
   async findAllWithUserId(

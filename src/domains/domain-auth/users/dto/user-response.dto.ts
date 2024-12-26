@@ -33,6 +33,7 @@ export class UserResponseDto extends BaseResponse {
   haveProfile?: boolean;
 
   profile: UserProfile;
+
   constructor(init: Partial<UserResponseDto>) {
     super(init);
 

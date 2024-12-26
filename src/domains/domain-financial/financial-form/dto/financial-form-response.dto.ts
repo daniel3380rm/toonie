@@ -101,7 +101,5 @@ export class FinancialFormResponseDto extends BaseResponseWithActionDates {
     this.financialFormTime = init.financialFormTime
       ? new FinancialFormTimeResponseDto(init.financialFormTime)
       : null;
-    console.log(this);
-    console.log(this.adviser);
   }
 }
