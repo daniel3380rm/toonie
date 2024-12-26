@@ -143,5 +143,12 @@ export class UpdateFinancialFormDto {
   @IsOptional()
   otherFinancialGoal: string;
 
+  @ApiProperty({
+    description: 'status',
+    example: '3',
+    required: false,
+  })
+  status: number;
+
   userId: number;
 }

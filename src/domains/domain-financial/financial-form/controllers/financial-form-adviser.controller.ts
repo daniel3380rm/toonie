@@ -1,5 +1,6 @@
 import {
   ApiBearerAuth,
+  ApiBody,
   ApiOperation,
   ApiResponse,
   ApiTags,
@@ -12,6 +13,7 @@ import {
   Get,
   Param,
   UseGuards,
+  Patch,
 } from '@nestjs/common';
 import { FinancialFormService } from '../services/financial-form.service';
 import { FinancialFormResponseDto } from '../dto/financial-form-response.dto';
@@ -24,6 +26,8 @@ import { FinancialFormPaginationConfigConst } from '../constant/financial-form-p
 import { IdDto } from '../../../../common/dto/request/id.dto';
 import { RoleGuard } from 'src/domains/domain-auth/authorization/roles/role.guard';
 import { RoleType } from 'src/domains/domain-auth/authorization/roles/role.decorator';
+import { UpdateFinancialFormDto } from '../dto/update-financial-form.dto';
+import { UpdateStatusFinancialFormDto } from '../dto/update-status-financial-form.dto';
 
 @ApiBearerAuth()
 @ApiTags('Financial Form Advise')
@@ -81,6 +85,30 @@ export class FinancialFormAdviserController {
 
     return new SuccessResponse({
       data: new FinancialFormResponseDto(response) ?? null,
+    });
+  }
+
+  @ApiOperation({ summary: 'edit status' })
+  @ApiResponse({
+    status: HttpStatus.OK,
+    type: FinancialFormResponseDto,
+  })
+  @ApiBody({
+    type: UpdateFinancialFormDto,
+  })
+  @Patch(':id')
+  async updateAdvise(
+    @Param() { id }: IdDto,
+    updateDto: UpdateStatusFinancialFormDto,
+    @GetUser()
+    user: IUser,
+  ) {
+    await this.financialFormService.updateStatus(id, {
+      userId: user?.id,
+      ...updateDto,
+    });
+    return new SuccessResponse({
+      data: null,
     });
   }
 }

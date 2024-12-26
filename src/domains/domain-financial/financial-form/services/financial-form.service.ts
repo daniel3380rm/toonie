@@ -13,6 +13,7 @@ import { FinancialFormTimeService } from '../../financial-form-time/services/fin
 import { ItemStatusFinancialFormTime } from '../../financial-form-time/enums/item-status-financial-form-time.enum';
 import { UsersService } from 'src/domains/domain-auth/users/services/users.service';
 import { generateReferralCode } from 'src/common/helper';
+import { UpdateStatusFinancialFormDto } from '../dto/update-status-financial-form.dto';
 
 @Injectable()
 export class FinancialFormService {
@@ -97,6 +98,15 @@ export class FinancialFormService {
   async update(id: number, updateDto: UpdateFinancialFormDto) {
     const financialFormFound = await this.financialFormRepository.findOne({
       where: { id },
+    });
+    if (!financialFormFound)
+      throw new NotFoundException(FinancialFormErrors.NOT_FOUND);
+    return await this.financialFormRepository.update(id, updateDto);
+  }
+
+  async updateStatus(id: number, updateDto: UpdateStatusFinancialFormDto) {
+    const financialFormFound = await this.financialFormRepository.findOne({
+      where: { id, adviserId: updateDto.userId },
     });
     if (!financialFormFound)
       throw new NotFoundException(FinancialFormErrors.NOT_FOUND);

@@ -19,6 +19,7 @@ import { InsuranceStatusEnum } from '../enums/insurance-status.enum';
 import { InvestmentStatusEnum } from '../enums/investment-status.enum';
 import { BankruptcyHistoryEnum } from '../enums/bankruptcy-history.enum';
 import { FinancialFormTimeEntity } from '../../financial-form-time/entities/financial-form-time.entity';
+import { ItemStatusFinancialFormTime } from '../enums/item-status-financial-form-time.enum';
 
 @Entity('financial_form')
 export class FinancialFormEntity extends ParentEntity {
@@ -66,6 +67,9 @@ export class FinancialFormEntity extends ParentEntity {
 
   @Column({ nullable: true })
   otherFinancialGoal: string;
+
+  @Column({ default: ItemStatusFinancialFormTime.Pending })
+  status!: ItemStatusFinancialFormTime;
 
   @ManyToOne(() => UserEntity)
   @JoinColumn({ name: 'userId' })
