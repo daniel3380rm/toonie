@@ -9,7 +9,7 @@ export const FinancialFormPaginationConfigConst: PaginateConfig<FinancialFormEnt
     sortableColumns: ['id', 'createdAt', 'updatedAt'],
     nullSort: 'last',
     defaultSortBy: [['createdAt', 'DESC']],
-    relations: ['user', 'financialFormTime'],
+    relations: ['user', 'adviser', 'financialFormTime'],
     filterableColumns: {
       // Enable individual operators on a column
       id: [FilterOperator.EQ, FilterSuffix.NOT],
