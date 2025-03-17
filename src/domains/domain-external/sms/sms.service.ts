@@ -46,6 +46,7 @@ export class SmsService {
   private sendMessage(phoneNumber: string, message: string) {
     try {
       const formattedPhoneNumber = this.formatPhoneNumber(phoneNumber);
+      // console.log(formattedPhoneNumber);
       this.twilioService.client.messages
         .create({
           body: message,
@@ -59,8 +60,13 @@ export class SmsService {
   }
 
   private formatPhoneNumber(phoneNumber: string): string {
-    if (phoneNumber.startsWith('00')) {
-      const formattedNumber = '+1' + phoneNumber.substring(2);
+    if (phoneNumber.startsWith('001')) {
+      const formattedNumber = '+1' + phoneNumber.substring(3);
+      return formattedNumber;
+    }
+
+    if (phoneNumber.startsWith('00') && !phoneNumber.startsWith('001')) {
+      const formattedNumber = '+' + phoneNumber.substring(2);
       return formattedNumber;
     }
 
@@ -69,7 +75,7 @@ export class SmsService {
       return formattedNumber;
     }
 
-    if (!phoneNumber.startsWith('+') && !phoneNumber.startsWith('00')) {
+    if (!phoneNumber.startsWith('+')) {
       const formattedNumber = '+1' + phoneNumber;
       return formattedNumber;
     }
