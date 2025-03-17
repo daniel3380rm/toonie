@@ -54,7 +54,7 @@ export class SmsService {
         })
         .catch((err) => console.log(err));
     } catch (err) {
-      console.log(err);
+      console.log('err');
     }
   }
 
