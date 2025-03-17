@@ -44,12 +44,36 @@ export class SmsService {
     this.sendMessage(phoneNumber, message);
   }
   private sendMessage(phoneNumber: string, message: string) {
-    this.twilioService.client.messages
-      .create({
-        body: message,
-        to: phoneNumber,
-        from: this.configService.get('twilio.fromNumber'), // From a valid Twilio number
-      })
-      .catch((err) => console.log(err));
+    try {
+      const formattedPhoneNumber = this.formatPhoneNumber(phoneNumber);
+      this.twilioService.client.messages
+        .create({
+          body: message,
+          to: formattedPhoneNumber,
+          from: this.configService.get('twilio.fromNumber'), // From a valid Twilio number
+        })
+        .catch((err) => console.log(err));
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  private formatPhoneNumber(phoneNumber: string): string {
+    if (phoneNumber.startsWith('00')) {
+      const formattedNumber = '+1' + phoneNumber.substring(2);
+      return formattedNumber;
+    }
+
+    if (phoneNumber.startsWith('0') && !phoneNumber.startsWith('00')) {
+      const formattedNumber = '+1' + phoneNumber.substring(1);
+      return formattedNumber;
+    }
+
+    if (!phoneNumber.startsWith('+') && !phoneNumber.startsWith('00')) {
+      const formattedNumber = '+1' + phoneNumber;
+      return formattedNumber;
+    }
+
+    return phoneNumber;
   }
 }
